@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tag: 书籍介绍 - 邻家天使 Gathering place</title>
+    <title>邻家天使 Gathering place - お邻の天使样にいつの间にか駄目人间にされていた件の集束地</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -35,109 +35,102 @@
 <body class="loading">
     <span id="config-title" style="display:none">邻家天使 Gathering place</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/index.html/" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/Photography/" title="插画" target="_blank" rel="noopener">插画</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/code/" title="代码" target="_blank" rel="noopener">代码</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/NULL" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="/1580119717@qq.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2020 dxpmaker.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
-		
+    <div id="single" class="page">
+    <div id="top">
+        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                
+                        <h2>break语句</h2>
+    <p>break的作用在于跳出当前循环（注意是当前循环而不是所有的循环）且能跳出swiitch的后续判断<br>栗子1：</p>
+    <pre>
+        int main(){
+            int n=0;
+            while(1){//死循环1
+                while(1){//死循环2
+                    n++;
+                    printf("循环第%d次\n",n);//每次运行输出一次
+                   break;//当输出一次时跳出循环2
+                }
+                if(n==3){
+                    break;//当n==3时跳出循环1
+                }
+            }
+        return 0;
+        }
+    </pre>
+    <br>栗子2：
+    <pre>
+        int main(){
+            int i=1;
+            switch(i){
+                case 1:printf("1反馈");
+                case 2:printf("2反馈");break;//当为1时两个值具输出代表break的跳出对switch语句极其重要。
+            }
+        return 0;
+        }
+    </pre>
+    <h2>continue跳出</h2>
+    <p>
+        continue跳出与break存在差别，其作用并不是跳出整个循环而是跳出当前循环<br>栗子：
     </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+    <pre>
+        int main(){
+            int n;
+            for(n=1;n&lt;10;n++){
+                if(n==4){//当n=4时跳出当前循环
+                    continue;
+                }
+                printf("%d\n",n);
+            }
+            return 0;
+        }
+    </pre>
+    <p>你可以发现输出中缺少4的输出，因为continue在n==4时跳出了当前循环进入了下一循环，所以不存在输出。</p>
+    <h2>goto语句</h2>
+    <p>goto语句还是C语言中比较有意思的语句其能在程序中标记一个要跳回的地方然后在另一个地方标记一个if判断的跳回点或跳出点来回跳</p>
+    <b>不建议在较大的程序中使用goto语句因为他会严重降低程序的可读性以及后续维护的难度</b>
+    <pre>
+        int main(){
+            int n=1;
+            loop://标记点
+            printf("%d",n)
+            if(n!=10){
+                n++;
+                goto loop;//跳回到标记点
+            }//该方法使用goto与if建立一个循环程序
+        }
+    </pre>
+    <h2>循环的嵌套：示例99乘法算术表的打印</h2>
+    <pre>
+        #include&lt;stdio.h&gt;
+        #include&lt;stdlib.h&gt;//调用system语句
+        int main(){
+            int i,j;
+            for(i=1;i&lt;10;i++){
+                for(j=1;j&lt;=i;j++){//仅输出不重复的部分
+                    printf("%dx%d=%d\t",j,i,i*j);//\为制表符用于平衡间距类似于excel表格
+                }
+                printf("\n");//当每输出一次时换行
+            }
+            system("pause");//system可用于调用命令行来完成部分功能此处指使程序在结束后停止需要一次输入后继续（相当于暂停）
+            return 0;
+    </pre>
+    <br><br><br>
+    <tr>
+        <td><a href="8.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="10.html">下一页</a></td>
+    </tr>
+                
+                </div>
+            </div>
         </div>
     </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>三月 24, 2020</p>
-        <h2><a href="/2020/03/24/%E5%85%B3%E4%BA%8E%E9%82%BB%E5%AE%B6%E7%9A%84%E5%A4%A9%E4%BD%BF%E5%A4%A7%E4%BA%BA%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A7%89%E6%8A%8A%E6%88%91%E5%85%BB%E6%88%90%E5%BA%9F%E4%BA%BA%E8%BF%99%E4%BB%B6%E4%BA%8B/" title="关于邻家的天使大人不知不觉把我养成废人这件事" class="posttitle">关于邻家的天使大人不知不觉把我养成废人这件事</a></h2>
-        <p class="summary">藤宫周所住公寓的隔壁，住着学校第一的美少女椎名真昼。两人原本并没有什么瓜葛。有一天，周看到她淋在雨中，把伞借给了她...</p>
-    </div>
-    
 </div>
-
-    <div id="primary">
-        
-    </div>
-    
-</div>
-<div id="preview"></div>
-
-
 
 </body>
 

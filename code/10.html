@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tag: 书籍介绍 - 邻家天使 Gathering place</title>
+    <title>邻家天使 Gathering place - お邻の天使样にいつの间にか駄目人间にされていた件の集束地</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -35,109 +35,84 @@
 <body class="loading">
     <span id="config-title" style="display:none">邻家天使 Gathering place</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/index.html/" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/Photography/" title="插画" target="_blank" rel="noopener">插画</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/code/" title="代码" target="_blank" rel="noopener">代码</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/NULL" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="/1580119717@qq.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2020 dxpmaker.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
-		
+    <div id="single" class="page">
+    <div id="top">
+        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                
+                        <h2>一维数组</h2>
+    <p>一维数组的意义在于定义一个能储存多的数据的保存空间<br>例：</p>
+    <pre>
+        int main(){
+            int a[4];//定义一个空间为四的数组（注意：在C语言中数组下标是从0开始，即a[4]没有意义且为空）
+        return 0;
+        }
+    </pre>
+    <p>对数组的定义也有多种办法<br>例：</p>
+    <pre>
+        int main(){
+            int a[4];
+            int b[4]={1,2,3,4};//注意该方法如果赋值超过将会被警告
+            int c[]={1,2,3,4};//该方法可以使程序自动判断需要赋值的数量，来决定数组大小
+        return 0;
+        }
+    </pre>
+    <h2>数组的调用</h2>
+    <pre>
+        int main(){
+            int n;
+            int a[]={1,2,3,4,5,6,7};
+            for(n=0;n&lt;7;n++){
+                printf("a[%d]:%d\n",n,a[n]);//遍历数组并输出
+            }
+        return 0;
+        }
+    </pre>
+    <h3>字符串的定义</h3>
+    <p>一般而言在char型变量要输入大量的字符时一般的变量定义及调用极其复杂且低效，这时就需要用到char型数组<br>例：</p>
+    <pre>
+        int main(){
+            char a[]={"hello world"};
+            printf("%s",a);//输出整个字符串（字符串即在C语言中指大量的字符）
+        }
+    </pre>
+    <h2>二维数组</h2>
+    <p>
+        相比于一维数组二维数组可以引入空间概念<br>如
     </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+    <img src="https://s1.ax1x.com/2020/05/01/JXK7Y6.png" alt="JXK7Y6.png" border="0" />
+    <p>相较于一维数组的直线二维数组进入了平面的范畴而其定义方式也有三种</p>
+    <pre>
+        int main(){
+            int a[2][3]={1,2,3,4,5,6};//自动分配到各个空间中
+            int b[][2]={1,2,3,4,5,6}//只能省略行不能省略列
+            int i,j;
+            for(i=0;i&lt;2;i++){
+                for(j=0;j&lt;3;j++){
+                    printf("a[%d][%d]=%d\n",i,j,a[i][j]);
+                }
+            }
+        return 0;
+        }
+    </pre>
+    <h2>多维数组</h2>
+    <p>多维数组使用量小（一般会使用结构体更适合分类）但其使用与2维相似增加维度即可此处不在赘述。</p>
+    <br><br><br>
+    <tr>
+        <td><a href="9.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="11.html">下一页</a></td>
+    </tr>
+                
+                </div>
+            </div>
         </div>
     </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>三月 24, 2020</p>
-        <h2><a href="/2020/03/24/%E5%85%B3%E4%BA%8E%E9%82%BB%E5%AE%B6%E7%9A%84%E5%A4%A9%E4%BD%BF%E5%A4%A7%E4%BA%BA%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A7%89%E6%8A%8A%E6%88%91%E5%85%BB%E6%88%90%E5%BA%9F%E4%BA%BA%E8%BF%99%E4%BB%B6%E4%BA%8B/" title="关于邻家的天使大人不知不觉把我养成废人这件事" class="posttitle">关于邻家的天使大人不知不觉把我养成废人这件事</a></h2>
-        <p class="summary">藤宫周所住公寓的隔壁，住着学校第一的美少女椎名真昼。两人原本并没有什么瓜葛。有一天，周看到她淋在雨中，把伞借给了她...</p>
-    </div>
-    
 </div>
-
-    <div id="primary">
-        
-    </div>
-    
-</div>
-<div id="preview"></div>
-
-
 
 </body>
 

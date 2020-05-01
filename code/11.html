@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tag: 书籍介绍 - 邻家天使 Gathering place</title>
+    <title>邻家天使 Gathering place - お邻の天使样にいつの间にか駄目人间にされていた件の集束地</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -35,109 +35,114 @@
 <body class="loading">
     <span id="config-title" style="display:none">邻家天使 Gathering place</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/index.html/" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/Photography/" title="插画" target="_blank" rel="noopener">插画</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/code/" title="代码" target="_blank" rel="noopener">代码</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/NULL" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="/1580119717@qq.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2020 dxpmaker.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
-		
-    </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+    <div id="single" class="page">
+    <div id="top">
+        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                
+                        <h2>输出函数</h2>
+    <p>输出函数有</p>
+    <pre>
+        printf();//标准输出流函数函数
+        puts();//标准字符串输出函数
+        putc();//字符输出到指定的文件（宏，较复杂不细讲）（需要指定输入的值）
+        putchar();//输出一个字符（在多次调用会从上次的地方继续输出）
+    </pre>
+    <p>在输出函数中printf是基础输出能输出字符整型等等而puts则使用较少一般用于输出指定的字符串（代码小）putchar则是用于控制输出量</p>
+    <pre>
+        int main(){
+            char a[]={"Hello world"};
+            int i;
+            printf("%s\n",a);
+            puts("HelloWorld\n");
+            puts(a);//也可如此使用
+            for(i=5;i&lt;5;i++){;
+                putchar(a);
+            }
+            return 0;
+        }
+    </pre>
+    <h2>输入函数</h2>
+    <p>输入函数有</p>
+    <pre>
+        scanf();//与printf使用方法类似差别在于其在获取错误输入时可能会出现错误（%d时输出英文会导致程序无法结束）
+        gets(); //获取输入的字符串
+        getc();//获取的字符从指定的文件中（宏，较复杂不细讲）（需要指定输入的值）
+        getchar();//获取键盘的输入
+    </pre>
+    <p>在输入函数中scanf为标准的输入函数获取键盘所有输入gets则是获取输入的字符串getchar则会每次读取一个字符并将指针想后移动一次</p>
+    <pre>
+        int main(){
+            char a[10];
+            char b;
+            scanf("%s",a);//也可换成gets(a);//注意仅能存在一个全输入点（好像是因为stdio.h的输入流问题）
+            puts(a);
+            b=getchar();
+            puts(b);
+            return 0;
+        }
+    </pre>
+    <table>
+            <tr>
+                <td>符号</td>
+                <td>作用</td>
+            </tr>
+            <tr>
+                <td>%d</td>
+                <td>整型输出</td>
+            </tr>
+            <tr>
+                <td>%ld</td>
+                <td>长整型输出</td>
+            </tr>
+            <tr>
+                <td>%o</td>
+                <td>以八进制数形式输出整数</td>
+            </tr>
+            <tr>
+                <td>%x</td>
+                <td>以十六进制数形式输出整数</td>
+            </tr>
+            <tr>
+                <td>%u</td>
+                <td>以十进制数输出unsigned型数据(无符号数)</td>
+            </tr>
+            <tr>
+                <td>%c</td>
+                <td>用来输出一个字符</td>
+            </tr>
+            <tr>
+                <td>%s</td>
+                <td>用来输出一个字符串</td>
+            </tr>
+            <tr>
+                <td>%f</td>
+                <td>用来输出实数，以小数形式输出</td>
+            </tr>
+            <tr>
+                <td>%e</td>
+                <td>以指数形式输出实数</td>
+            </tr>
+            <tr>
+                <td>%g</td>
+                <td>根据大小自动选f格式或e格式，且不输出无意义的零</td>
+    </table>
+   <br><br><br>
+    <tr>
+        <td><a href="10.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="12.html">下一页</a></td>
+    </tr>
+                
+                </div>
+            </div>
         </div>
     </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>三月 24, 2020</p>
-        <h2><a href="/2020/03/24/%E5%85%B3%E4%BA%8E%E9%82%BB%E5%AE%B6%E7%9A%84%E5%A4%A9%E4%BD%BF%E5%A4%A7%E4%BA%BA%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A7%89%E6%8A%8A%E6%88%91%E5%85%BB%E6%88%90%E5%BA%9F%E4%BA%BA%E8%BF%99%E4%BB%B6%E4%BA%8B/" title="关于邻家的天使大人不知不觉把我养成废人这件事" class="posttitle">关于邻家的天使大人不知不觉把我养成废人这件事</a></h2>
-        <p class="summary">藤宫周所住公寓的隔壁，住着学校第一的美少女椎名真昼。两人原本并没有什么瓜葛。有一天，周看到她淋在雨中，把伞借给了她...</p>
-    </div>
-    
 </div>
-
-    <div id="primary">
-        
-    </div>
-    
-</div>
-<div id="preview"></div>
-
-
 
 </body>
 

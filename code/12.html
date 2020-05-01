@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tag: 书籍介绍 - 邻家天使 Gathering place</title>
+    <title>邻家天使 Gathering place - お邻の天使样にいつの间にか駄目人间にされていた件の集束地</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -35,109 +35,64 @@
 <body class="loading">
     <span id="config-title" style="display:none">邻家天使 Gathering place</span>
     <div id="loader"></div>
-    <div class="nav">
-    <ul id="menu-menu" class="menu">
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/index.html/" title="首页" target="_blank" rel="noopener">首页</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/Photography/" title="插画" target="_blank" rel="noopener">插画</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/code/" title="代码" target="_blank" rel="noopener">代码</a>
-        </li>
-        
-        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
-            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
-        </li>
-        
-    </ul>
-	<span class="target"></span>
-	<center>
-	<div class="hitokoto">
-		<span class="typed" id="hitokoto" data-st="true"></span>
-	</div>
-	</center>
-	
-	<p class="footerlinks">
-		<a href="#" class="iconfont icon-null"></a>
-		
-            <a href="/NULL" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
-        
-            <a href="/NULL" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
-        
-            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
-        
-            <a href="/1580119717@qq.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
-        
-		<a href="#" class="iconfont icon-null"></a>
-	</p>
-	
-    <p id="copyright">
-        &copy; 2020 dxpmaker.
-        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
-        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
-		
-		<span> | </span><a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">冀ICP备xxxxxxx号</a>
-		
+    <div id="single" class="page">
+    <div id="top">
+        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
+    </div>
+    <div class="section">
+        <div class="article">
+            <div class="main">
+                <div class="content">
+                
+                        <h2>函数的定义</h2>
+    <p>
+        在程序中我们可以通过定义一个函数来作为代码块并，在需要的时候来执行该段代码
     </p>
-</div>
-
-<div id="container">
-    
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img src="/img/%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
+    <pre>
+        int main(){
+            one();
+            return 0;
+        }
+        void one(){//void为空返回值返回子可定义one为函数名称
+            printf("函数执行");//void函数可以定义返回也可不定义返回，但定义后返回值必须为空为其他时可能出现错误
+            //return ;
+        }
+    </pre>
+    <b>注意你无法将char定义为返回值类（c++可用string作为返回值）代表你无法发返回字符。</b>
+    <p>同时当有必要时你可以传递一个值到函数时你可以定义一个或多个下传的空间</p>
+    <pre>
+        int main(){
+            one(1,2);
+            return 0;
+        }
+        void one(int a,int b;){
+            printf("%d",a*b)
+        }
+    </pre>
+    <h2>return ;的意义</h2>
+    <p>return ;函数意义在于返回什么<br>栗子：</p>
+    <pre>
+        int main(){
+            printf("%d",tow(1,2));//函数可嵌套使用
+            return 0;
+        }
+        int tow(int a,int b){
+            return a*b;//返回为a*b
+        }
+    </pre>
+    <p>return ;的意义在于返回一个值可以是固定的值也可以是变量的值。但一定要与定义的值相同，否则将发生错误</p>
+    <br><br><br>
+    <tr>
+        <td><a href="11.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="13.html">下一页</a></td>
+    </tr>
+                
+                </div>
+            </div>
         </div>
     </div>
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
-        </svg>
-        <div></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="/"></a>
-			
-            <div class="iconfont icon-menu switchmenu"></div>
-        </div>
-    </div>
-    
-    <div id="post0">
-        <p>三月 24, 2020</p>
-        <h2><a href="/2020/03/24/%E5%85%B3%E4%BA%8E%E9%82%BB%E5%AE%B6%E7%9A%84%E5%A4%A9%E4%BD%BF%E5%A4%A7%E4%BA%BA%E4%B8%8D%E7%9F%A5%E4%B8%8D%E8%A7%89%E6%8A%8A%E6%88%91%E5%85%BB%E6%88%90%E5%BA%9F%E4%BA%BA%E8%BF%99%E4%BB%B6%E4%BA%8B/" title="关于邻家的天使大人不知不觉把我养成废人这件事" class="posttitle">关于邻家的天使大人不知不觉把我养成废人这件事</a></h2>
-        <p class="summary">藤宫周所住公寓的隔壁，住着学校第一的美少女椎名真昼。两人原本并没有什么瓜葛。有一天，周看到她淋在雨中，把伞借给了她...</p>
-    </div>
-    
 </div>
-
-    <div id="primary">
-        
-    </div>
-    
-</div>
-<div id="preview"></div>
-
-
 
 </body>
 
