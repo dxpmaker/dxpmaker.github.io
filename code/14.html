@@ -44,24 +44,38 @@
             <div class="main">
                 <div class="content">
                 
-                         <ul>
-        <il><a href="1.html">引言及编译程序的建议</a></il><br>
-        <il><a href="2.html">hello world程序</a></il><br>
-        <il><a href="3.html">#include&lt;&gt; 头文件的调用及含义</a></il><br>
-        <il><a href="4.html">int、char、float、double类型及延伸</a></il><br>
-        <il><a href="5.html">常量与变量（修饰符）</a></il><br>
-        <il><a href="6.html">算数、逻辑、位运算符</a></il><br>
-        <il><a href="7.html">if() else()、switch()判断语句</a></il><br>
-        <il><a href="8.html">for()、while()、do while()循环</a></il><br>
-        <il><a href="9.html">break、continue、go to详解</a></il><br>
-        <il><a href="10.html">一维、二维、多维数组的定义及调用</a></il><br>
-        <il><a href="11.html">输出与输入函数</a></il><br>
-        <il><a href="12.html">函数的定义及调用与return ;语句的意义</a></il><br>
-        <il><a href="13.html">函数的嵌套、自我调用，局部变量与全局变量</a></il><br>
-        <il><a href="14.html">指针初解</a></il><br>
-        <il><a href="15.html">文件的读写初解</a></il><br>
-        <il><a href="16.html">尾言</a></il><br>
-    </ul>
+                        <h2>指针</h2>
+    <p>在C语言中指针是一个核心的内容，其类似于变量，又有别于变量。他代表的是指向电脑中的一个地址（一般是内存的地址），其调用速度与运算速度要远超一般变量，能有效的提高程序运行速度。同时他也能完成其承担的部分内容</p>
+    <pre>
+        int main(){
+            int n=10;//定义变量时程序会自动的在内存开辟一个空间
+            int *p=NULL;//定义一个空指针（*为指针运算符，用于取指针所代表的的地址的量进行运算）
+            p=&a;//将变量n的地址赋值给指针（注，&为取地运算符用于获取地址）
+            a=20;
+            printf("%d,%d，%d",a,*p,&p);//将指针所指向的内容输出
+            return 0;
+        }
+    </pre>
+    <h2>指针数组</h2>
+    <p>
+        在数组中其第一位的数据地址为其的[0]项，所以在指针中赋值其第一位的地址即可获得整个数组
+    </p>
+    <pre>
+        int main(){
+            int n[]={1,2,3,4,5,6,7,8,9};
+            int *p;//定义空指针
+            p=&n[0];
+            printf("%d,%d\n",*p,*p+1);//输出地址中的数据
+            printf("%d,%d",&p,&p+2);//输出地址
+            return 0;
+        }
+    </pre>
+    <br><br><br>
+    <tr>
+        <td><a href="13.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="15.html">下一页</a></td>
+    </tr>
                 
                 </div>
             </div>

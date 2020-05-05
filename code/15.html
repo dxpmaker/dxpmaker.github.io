@@ -44,24 +44,79 @@
             <div class="main">
                 <div class="content">
                 
-                         <ul>
-        <il><a href="1.html">引言及编译程序的建议</a></il><br>
-        <il><a href="2.html">hello world程序</a></il><br>
-        <il><a href="3.html">#include&lt;&gt; 头文件的调用及含义</a></il><br>
-        <il><a href="4.html">int、char、float、double类型及延伸</a></il><br>
-        <il><a href="5.html">常量与变量（修饰符）</a></il><br>
-        <il><a href="6.html">算数、逻辑、位运算符</a></il><br>
-        <il><a href="7.html">if() else()、switch()判断语句</a></il><br>
-        <il><a href="8.html">for()、while()、do while()循环</a></il><br>
-        <il><a href="9.html">break、continue、go to详解</a></il><br>
-        <il><a href="10.html">一维、二维、多维数组的定义及调用</a></il><br>
-        <il><a href="11.html">输出与输入函数</a></il><br>
-        <il><a href="12.html">函数的定义及调用与return ;语句的意义</a></il><br>
-        <il><a href="13.html">函数的嵌套、自我调用，局部变量与全局变量</a></il><br>
-        <il><a href="14.html">指针初解</a></il><br>
-        <il><a href="15.html">文件的读写初解</a></il><br>
-        <il><a href="16.html">尾言</a></il><br>
-    </ul>
+                        <h2>文件指针的定义与应用</h2>
+    <p>在C语言中文件的读写是依靠指针来进行的<br>栗子</p>
+    <pre>
+        int main(){
+            FILE *fp1 =fopen("文本.txt","w");
+            //fopen中的输入分别为  文档地址（此处用的是相对地址），打开方式(此处使用仅写)
+            if(fp1==NULL){
+                puts("错误,文件不存在或无法打开");
+            }
+            fputs("Hello world",fp1);//其实就是输入输出函数最前面加个f就不再细讲了(此处为写入字符串)
+            fclose(fp1);//关闭文件指针（相当于保存）（请注意关闭否则将会浪费内存）
+            return 0;
+        }
+    </pre>
+    <pre>
+        int main(){
+            FILE *fp1=fopen("文本.txt","r");
+            char A[100];//定义一个用于保存的字符串数组
+            fgets(A,100,fp1);//读取文件流需定义一个保存文本的字符串也就是输入值一，同时第二个输入值为订意读取文件的大小（文本指针会停在读取结束的地方），第三个值为文件指针
+            puts(A);//输出文本内容
+            fclose(fp1);//关闭文件
+        }
+    </pre>
+<table>
+    <tr>文本操作命令</tr>
+    <tr>
+        <td>命令</td>
+        <td>操作</td>
+        <td>区别</td>
+        <td>文件要求及操作</td>
+    </tr>
+    <tr>
+        <td>r</td>
+        <td>读</td>
+        <td>从文件头开始</td>
+        <td>文件需存在，否则将打开失败</td>
+    </tr>
+    <tr>
+        <td>r+</td>
+        <td>读写</td>
+        <td>从文件头开始</td>
+        <td>文件需存在，否则将打开失败</td>
+    </tr>
+    <tr>
+        <td>w</td>
+        <td>写</td>
+        <td>从文件头开始</td>
+        <td>文件不存在则创建，存在则清空</td>
+    </tr>
+    <tr>
+        <td>w+</td>
+        <td>读写</td>
+        <td>从文件头开始</td>
+        <td>文件不存在则创建，存在则清空</td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>写</td>
+        <td>从文件尾开始</td>
+        <td>文件不存在进行创建，存在则从文件尾继续写入</td>
+    </tr>
+    <tr>
+        <td>a+</td>
+        <td>读写</td>
+        <td>从文件头读取，从文件尾写入</td>
+        <td>文件不存在进行创建，存在则从文件尾继续写入</td>
+    </tr>
+    <br><br><br>
+    <tr>
+        <td><a href="14.html">上一页</a></td>
+        <td><a href="index.html">回到目录</a></td>
+        <td><a href="16.html">下一页</a></td>
+    </tr>
                 
                 </div>
             </div>
